@@ -123,6 +123,7 @@ class ImageEditor:
         self.label.config(image=self.tk_img)
         self.label.image = self.tk_img
         self.size_label.config(text=f"Size: {self.img.width}x{self.img.height}")
+        self.draw_tool = ImageDraw.Draw(self.img)
         if len(self.memory) > 30:
             self.memory.pop(0)
         
