@@ -74,7 +74,7 @@ class ImageEditor:
         filetypes=[("Image Files", "*.png *.jpg *.jpeg *.ppm"), ("All Files", "*.*")]
         )
         if path:
-            isok = path.endswith((".jpg", ".jpeg", ".png", ".ppm"))
+            isok = path.endswith((".jpg", ".jpeg", ".png", ".ppm", ".JPG", ".JPEG", ".PNG", ".PPM"))
             if isok:
                 self.img =  Image.open(path).convert("RGB")
                 self.img = self.img.resize((800, 400))
@@ -90,7 +90,7 @@ class ImageEditor:
         filetypes=[("Image Files", "*.png *.jpg *.jpeg *.ppm"), ("All Files", "*.*")]
         )
         if path:
-            isok = path.endswith((".jpg", ".jpeg", ".png", ".ppm"))
+            isok = path.endswith((".jpg", ".jpeg", ".png", ".ppm", ".JPG", ".JPEG", ".PNG", ".PPM"))
             if isok:
                 self.img = Image.open(path).convert("L")
                 self.img = self.img.resize((800, 400))
